@@ -12,7 +12,7 @@ public class movement : MonoBehaviour
     public GameObject player;
 
     public float maxTime;
-    public float minTime;
+   
 
     // Use this for initialization
     void Start()
@@ -43,7 +43,7 @@ public class movement : MonoBehaviour
         {
             if (rigid2D.velocity.y > 0F)
             {
-                rigid2D.velocity = new Vector2(rigid2D.velocity.x, 0.1F);
+                rigid2D.velocity = new Vector2(rigid2D.velocity.x, 0.5F);
             }
         }
     }
@@ -63,7 +63,7 @@ public class movement : MonoBehaviour
         if (collision.gameObject.tag == "deathTag")
         {
             player.SetActive(false);
-            GetComponent<respawn>().setDead();
+           respawn.setDead();
         }
     }
 

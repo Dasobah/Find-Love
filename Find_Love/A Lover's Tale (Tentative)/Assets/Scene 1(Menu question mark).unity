@@ -1505,8 +1505,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  jump: 7.5
+  jump: 8
   player: {fileID: 1818699259}
+  maxTime: 1
 --- !u!114 &1818699265
 MonoBehaviour:
   m_ObjectHideFlags: 0
