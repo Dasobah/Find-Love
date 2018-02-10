@@ -59,6 +59,7 @@ public class movement : MonoBehaviour{
         if(collision.gameObject.tag == "deathTag")
         {
             player.SetActive(false);
+            GetComponent<respawn>().setDead();
         }
     }
 

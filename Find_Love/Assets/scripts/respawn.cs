@@ -19,12 +19,20 @@ public class respawn : MonoBehaviour {
         {
             player.transform.position = spawnLocation;
             player.SetActive(true);
+            if (dead)
+            {
+                dead = false;
+            }
         }
-
+        if(dead && (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space))) { 
+            player.transform.position = spawnLocation;
+            player.SetActive(true);
+            dead = false;
+        }
 	}
 
-    void setDead()
+    public void setDead()
     {
-
+        dead = true;
     }
 }
