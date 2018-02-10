@@ -7,11 +7,12 @@ public class movement : MonoBehaviour{
     public float speed;
     private Rigidbody2D rigid2D;
     public float jump;
-    private int jumpsLeft = 1;
+    private int jumpsLeft;
     public GameObject player;
 
 	// Use this for initialization
 	void Start () {
+        jumpsLeft = 1;
         rigid2D = GetComponent<Rigidbody2D>();
 	}
 	
@@ -38,32 +39,14 @@ public class movement : MonoBehaviour{
         rigid2D.velocity = new Vector2(rigid2D.velocity.x, jump);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    public int GetJumpsLeft()
     {
-        if(collision.gameObject.tag == "groundTag" && jumpsLeft < 1)
-        {
-            jumpsLeft = 1;
-        }
-        
-        if(collision.gameObject.tag == "deathTag")
-        {
-            player.SetActive(false);
-        }
+        return jumpsLeft;
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
+    public void SetJumpsLeft(int num)
     {
-        if(collision.gameObject.tag == "groundTag" && jumpsLeft < 1)
-        {
-            jumpsLeft = 1;
-        }
+        jumpsLeft = num;
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if(collision.gameObject.tag == "groundTag")
-        {
-            jumpsLeft = 0;
-        }
-    }
 }
