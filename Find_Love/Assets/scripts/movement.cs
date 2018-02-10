@@ -10,6 +10,9 @@ public class movement : MonoBehaviour{
     private int jumpsLeft = 1;
     public GameObject player;
 
+    public float maxTime;
+    public float minTime;
+
 	// Use this for initialization
 	void Start () {
         rigid2D = GetComponent<Rigidbody2D>();
@@ -17,6 +20,8 @@ public class movement : MonoBehaviour{
 	
 	// Update is called once per frame
 	void Update () {
+        float start = Time.time;
+
         rigid2D.velocity = new Vector2(0, rigid2D.velocity.y);
         if(Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
         {
@@ -30,7 +35,13 @@ public class movement : MonoBehaviour{
         {
             Jump();
         }
-        
+        //stopping the jump
+        if(Input.GetKeyUp(KeyCode.UpArrow) || Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.Space) || maxTime < Time.time - start){
+            if (rigid2D.velocity.y > 0F)
+            {
+                rigid2D.velocity = new Vector2(rigid2D.velocity.x, 0.1F);
+            }
+        }
 	}
 
     void Jump()

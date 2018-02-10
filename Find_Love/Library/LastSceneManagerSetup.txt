@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scene 1(Menu question mark).unity
+- path: Assets/Find_Love.unity
   isLoaded: 1
   isActive: 1
