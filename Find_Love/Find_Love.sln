@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2017
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A Lover's Tale (Tentative)", "A Lover's Tale (Tentative).csproj", "{D2E349A1-7492-C335-D1CB-08ABBA2581D2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Find_Love", "Find_Love.csproj", "{C4CA1062-9649-4683-2276-7106DF48A34D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +9,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D2E349A1-7492-C335-D1CB-08ABBA2581D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D2E349A1-7492-C335-D1CB-08ABBA2581D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D2E349A1-7492-C335-D1CB-08ABBA2581D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D2E349A1-7492-C335-D1CB-08ABBA2581D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4CA1062-9649-4683-2276-7106DF48A34D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4CA1062-9649-4683-2276-7106DF48A34D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4CA1062-9649-4683-2276-7106DF48A34D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4CA1062-9649-4683-2276-7106DF48A34D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

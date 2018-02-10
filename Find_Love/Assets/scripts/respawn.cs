@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class respawn : MonoBehaviour {
 
+    public bool dead;
     public GameObject player;
     public Vector2 spawnLocation;
 
@@ -18,7 +19,12 @@ public class respawn : MonoBehaviour {
         {
             player.transform.position = spawnLocation;
             player.SetActive(true);
-
         }
+
 	}
+
+    void setDead()
+    {
+
+    }
 }
